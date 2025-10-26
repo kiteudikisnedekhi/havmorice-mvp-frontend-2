@@ -7,7 +7,7 @@ export default function Login() {
   const [step, setStep] = useState(1);
 
   const sendOtp = async () => {
-    const res = await fetch('https://your-railway-url.up.railway.app/auth/login', {
+    const res = await fetch('https://havmorice-mvp-2-production.up.railway.app/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone }),
@@ -16,7 +16,7 @@ export default function Login() {
   };
 
   const verifyOtp = async () => {
-    const res = await fetch('https://your-railway-url.up.railway.app/auth/verify', {
+    const res = await fetch('https://havmorice-mvp-2-production.up.railway.app/auth/verify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone, otp }),

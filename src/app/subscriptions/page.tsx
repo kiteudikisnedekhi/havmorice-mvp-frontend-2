@@ -6,11 +6,11 @@ export default function Subscriptions() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('https://your-railway-url.up.railway.app/subscriptions', {
+    fetch('https://havmorice-mvp-2-production.up.railway.app/subscriptions', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
-      .then(setSubscriptions);
+    .then(setSubscriptions);
   }, []);
 
   return (

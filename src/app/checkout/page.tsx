@@ -7,7 +7,7 @@ export default function Checkout() {
 
   const checkout = async () => {
     const token = localStorage.getItem('token');
-    const res = await fetch('https://your-railway-url.up.railway.app/payments/checkout', {
+    const res = await fetch('https://havmorice-mvp-2-production.up.railway.app/payments/checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

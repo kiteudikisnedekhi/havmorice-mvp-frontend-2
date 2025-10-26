@@ -6,7 +6,7 @@ export default function Tracking() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('https://your-railway-url.up.railway.app/operations/orders', {
+    fetch('https://havmorice-mvp-2-production.up.railway.app/operations/orders', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())

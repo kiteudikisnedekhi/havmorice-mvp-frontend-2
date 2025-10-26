@@ -5,7 +5,7 @@ export default function Catalog() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('https://your-railway-url.up.railway.app/catalog/products')
+    fetch('https://havmorice-mvp-2-production.up.railway.app/catalog/products')
       .then(res => res.json())
       .then(setProducts);
   }, []);
