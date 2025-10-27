@@ -6,7 +6,7 @@ export default function Profile() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('https://havmorice-mvp-2-production.up.railway.app/referrals/rewards', {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/referrals/rewards`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())

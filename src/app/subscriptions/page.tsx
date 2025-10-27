@@ -6,7 +6,7 @@ export default function Subscriptions() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('https://havmorice-mvp-2-production.up.railway.app/subscriptions', {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/subscriptions`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())

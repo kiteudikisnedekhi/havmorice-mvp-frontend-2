@@ -6,7 +6,7 @@ export default function Cart() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('https://havmorice-mvp-2-production.up.railway.app/cart', {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/cart`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
