@@ -5,7 +5,7 @@ export default function Catalog() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`${ process.env.NEXT_PUBLIC_API_URL }/catalog/products`)
+    fetch(`catalog/products`)
       .then(res => res.json())
       .then(setProducts);
   }, []);
