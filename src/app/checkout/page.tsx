@@ -7,7 +7,7 @@ export default function Checkout() {
 
   const checkout = async () => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`payments/checkout`, {
+    const res = await fetch(`/api/payments/checkout`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

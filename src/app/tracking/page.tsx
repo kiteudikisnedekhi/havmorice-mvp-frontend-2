@@ -6,7 +6,7 @@ export default function Tracking() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch(`operations/orders`, {
+    fetch(`/api/operations/orders`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())

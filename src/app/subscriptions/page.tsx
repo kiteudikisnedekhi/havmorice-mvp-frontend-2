@@ -6,7 +6,7 @@ export default function Subscriptions() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch(`subscriptions`, {
+    fetch(`/api/subscriptions`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())

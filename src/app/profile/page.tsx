@@ -6,7 +6,7 @@ export default function Profile() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch(`referrals/rewards`, {
+    fetch(`/api/referrals/rewards`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())
